@@ -20,6 +20,13 @@ function onBrushMove() {
   call(this.onBrushMoveCallback);
 }
 
+/**
+ * Custom event handler, fired upon mouse-up after dragging sliding window on chromosome
+ */
+function onBrushMouseUp() {
+  call(this.onBrushMouseUpCallback);
+}
+
 function setBrush(bpDomain, pxRange, xOffset, width, ideo) {
   var xScale,
     length = ideo.config.chrHeight;
@@ -28,7 +35,8 @@ function setBrush(bpDomain, pxRange, xOffset, width, ideo) {
 
   ideo.brush = d3.brushX()
     .extent([[xOffset, 0], [length + xOffset, width]])
-    .on('brush', onBrushMove);
+    .on('brush', onBrushMove)
+    .on('end', onBrushMouseUp);
 
   function onBrushMove() {
     var extent = currentEvent.selection.map(xScale.invert),
@@ -41,6 +49,13 @@ function setBrush(bpDomain, pxRange, xOffset, width, ideo) {
       ideo.onBrushMoveCallback();
     }
   }
+
+  function onBrushMouseUp() {
+    if (ideo.onBrushMouseUp) {
+      ideo.onBrushMouseUpCallback();
+    }
+  }
+
 }
 
 function getBasePairDomainAndPixelRange(chrModel, xOffset) {
@@ -149,4 +164,4 @@ function createBrush(chr, from, to) {
   writeBrush(chrModel, from, to, xOffset, width, ideo);
 }
 
-export {onBrushMove, createBrush};
+export {onBrushMove, onBrushMouseUp, createBrush};

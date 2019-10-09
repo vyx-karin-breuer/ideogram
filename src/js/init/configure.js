@@ -101,6 +101,7 @@ function configureCallbacks(config, ideo) {
   if (config.onLoadAnnots) ideo.onLoadAnnotsCallback = config.onLoadAnnots;
   if (config.onDrawAnnots) ideo.onDrawAnnotsCallback = config.onDrawAnnots;
   if (config.onBrushMove) ideo.onBrushMoveCallback = config.onBrushMove;
+  if (config.onBrushMouseUp) ideo.onBrushMouseUpCallback = config.onBrushMouseUp;
   if (config.onDidRotate) ideo.onDidRotateCallback = config.onDidRotate;
   if (config.onWillShowAnnotTooltip) {
     ideo.onWillShowAnnotTooltipCallback = config.onWillShowAnnotTooltip;
