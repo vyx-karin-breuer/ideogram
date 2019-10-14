@@ -179,14 +179,14 @@ function deserializeAnnotsForHeatmap(rawAnnotsContainer) {
     heatmapKeyIndexes.push(keys.indexOf(heatmapKey));
   }
 
-  newRaContainers =
+  newRawContainers =
     getNewRawAnnotContainers(heatmapKeyIndexes, rawAnnotBoxes, ideo);
 
   keys.splice(3, 0, 'trackIndex');
   keys.splice(4, 0, 'color');
 
   ideo.rawAnnots.keys = keys;
-  ideo.rawAnnots.annots = newRaContainers;
+  ideo.rawAnnots.annots = newRawContainers;
 
   reportPerformance(t0, ideo);
 }
