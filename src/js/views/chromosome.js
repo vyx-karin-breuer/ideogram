@@ -52,7 +52,7 @@ export class Chromosome {
 
     container = container.append('g')
       .attr('class', 'bands')
-      .attr('clip-path', 'url(#' + this._model.id + '-chromosome-set-clippath)');
+      .attr('clip-path', 'url(' + window.location + '#' + this._model.id + '-chromosome-set-clippath)');
 
     // Render chromosome arms
     isPArmRendered = this._renderArm(container, chrSetIndex, chrIndex, 'p');

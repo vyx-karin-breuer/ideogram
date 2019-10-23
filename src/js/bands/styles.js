@@ -59,19 +59,19 @@ staticCss =
   '#_ideogram.faint .stalk {fill: #EEF;}' +
   '#_ideogram.faint .gvar {fill: #EEF}' +
   // For sheen, i.e. the soft shine in chromosomes
-  '#_ideogram .gneg {fill: url("#gneg")} ' +
-  '#_ideogram .gpos25 {fill: url("#gpos25")} ' +
-  '#_ideogram .gpos33 {fill: url("#gpos33")} ' +
-  '#_ideogram .gpos50 {fill: url("#gpos50")} ' +
-  '#_ideogram .gpos66 {fill: url("#gpos66")} ' +
-  '#_ideogram .gpos75 {fill: url("#gpos75")} ' +
-  '#_ideogram .gpos100 {fill: url("#gpos100")} ' +
-  '#_ideogram .gpos {fill: url("#gpos100")} ' +
-  '#_ideogram .acen {fill: url("#acen")} ' +
-  '#_ideogram .stalk {fill: url("#stalk")} ' +
-  '#_ideogram .gvar {fill: url("#gvar")} ' +
-  '#_ideogram .noBands {fill: url("#noBands")} ' +
-  '#_ideogram .chromosome {fill: url("#noBands")} ' +
+  '#_ideogram .gneg {fill: url("' + window.location + '#gneg")} ' +
+  '#_ideogram .gpos25 {fill: url("' + window.location + '#gpos25")} ' +
+  '#_ideogram .gpos33 {fill: url("' + window.location + '#gpos33")} ' +
+  '#_ideogram .gpos50 {fill: url("' + window.location + '#gpos50")} ' +
+  '#_ideogram .gpos66 {fill: url("' + window.location + '#gpos66")} ' +
+  '#_ideogram .gpos75 {fill: url("' + window.location + '#gpos75")} ' +
+  '#_ideogram .gpos100 {fill: url("' + window.location + '#gpos100")} ' +
+  '#_ideogram .gpos {fill: url("' + window.location + '#gpos100")} ' +
+  '#_ideogram .acen {fill: url("' + window.location + '#acen")} ' +
+  '#_ideogram .stalk {fill: url("' + window.location + '#stalk")} ' +
+  '#_ideogram .gvar {fill: url("' + window.location + '#gvar")} ' +
+  '#_ideogram .noBands {fill: url("' + window.location + '#noBands")} ' +
+  '#_ideogram .chromosome {fill: url("' + window.location + '#noBands")} ' +
   '</style>';
 
 staticGradients =
